@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>AlphaDict</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--     Nav -->
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <span class="ml-3 text-xl">AlphaDict</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" href="https://code.dcoder.tech/profile/codyandersan">Dcoder</a>
+                <a class="mr-5 hover:text-white" href="https://replit.com/@codyandersan">Replit</a>
+                <a class="mr-5 hover:text-white" href="https://github.com/codyandersan">GitHub</a>
+            </nav>
+            <a href="https://github.com/codyandersan"
+                class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Visit
+                Profile
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-5 mx-auto">
+            <div class="text-center mb-10">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">AlphaDict
+                </h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400 text-opacity-80">A
+                    dictionary to quickly find out the meanings of words.</p>
+            </div>
+            <div class="flex mt-6 justify-center">
+                <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+        </div>
+
+        <div class="container px-5 py-0 mx-auto">
+            <div
+                class="flex lg:w-4/12 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+                <div class="relative sm:mb-0 flex-grow w-full">
+                    <label for="query" class="leading-7 text-sm text-gray-400">Enter the word</label>
+                    <input type="text" id="query" name="query"
+                        class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <button id="searchBtn"
+                    class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Go</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-20 mx-auto">
+            <div class="flex flex-col text-center w-full mb-10">
+                <h2 class="text-xs text-indigo-400 tracking-widest font-medium title-font mb-1">MEANINGS</h2>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Meanings of '<span
+                        id="word">malevolent</span>'
+                </h1>
+                <p class="text-lg leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Phonetics: <span
+                        id="word">/məˈlɛvələnt/</span>
+                    </span>
+                </p>
+
+            </div>
+            <div class="flex flex-wrap" id="meanings">
+                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                    <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Shooting Stars</h2>
+                    <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat.
+                        Distillery hexagon disrupt edison bulbche.</p>
+                    <a class="text-indigo-400 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                    <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">The Catalyzer</h2>
+                    <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat.
+                        Distillery hexagon disrupt edison bulbche.</p>
+                    <a class="text-indigo-400 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                    <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Neptune</h2>
+                    <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat.
+                        Distillery hexagon disrupt edison bulbche.</p>
+                    <a class="text-indigo-400 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                    <h2 class="text-lg sm:text-xl text-white font-medium title-font mb-2">Melanchole</h2>
+                    <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat.
+                        Distillery hexagon disrupt edison bulbche.</p>
+                    <a class="text-indigo-400 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        </div>
+    </section>
+
+
+
+    <!--             Footer -->
+    <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+
+                <span class="ml-3 text-xl">Cody Andersan</span>
+            </a>
+            <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+                Built
+                with &#9829; by
+                <a href="https://github.com/codyandersan" class="text-gray-500 ml-1" target="_blank"
+                    rel="noopener noreferrer">@codyandersan</a>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
