@@ -1,0 +1,21 @@
+{
+  "name": "AlphaDict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codyandersan/AlphaDict.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codyandersan/AlphaDict/issues"
+  },
+  "homepage": "https://github.com/codyandersan/AlphaDict#readme"
+}

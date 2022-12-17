@@ -30,18 +30,37 @@ const search = () => {
                 // console.log(meaning)
 
                 let defs = []
-                if (meaning.synoymns != null) synonymns.push(meaning.synonymns)
+                if (meaning.synonymns != null) synonymns.push(meaning.synonymns)
                 if (meaning.antonyms != null) antonyms.push(meaning.antonyms)
 
                 var partsOfSpeech = meaning["partOfSpeech"]
                 for (let i of meaning["definitions"]) {
                     defs.push(i.definition)
                 }
-                Object.assign(definitions, {[partsOfSpeech]: defs})
+                Object.assign(definitions, { [partsOfSpeech]: defs })
             }
-            console.log(definitions)
+            
+            console.log(phonetics)
             console.log(synonymns)
             console.log(antonyms)
+            console.log(definitions)
+            // console.log(typeof definitions)
+    
+            for (let k of definitions) {
+                    console.log("hi")
+                    console.log(k)
+                    alert("hi")
+                }
+            
+            
+            word_box.textContent = query.value
+            phonetics_box.textContent = phonetics
+            synonyms_box.textContent = synonymns
+            antonyms_box.textContent = antonyms
+
+            
+
+            return {phonetics, definitions, synonymns, antonyms }
 
 
             // let box = document.getElementById("box")
@@ -54,6 +73,5 @@ const search = () => {
             console.log('Fetch Error :-S', err);
         });
 }
-
 
 searchBtn.addEventListener("click", search)
