@@ -4,10 +4,7 @@ const search = () => {
     fetch(uri)
         .then(response => {
             if (response.status == 404) {
-                // update display as not found
-                console.log('Looks like there was a problem. Status Code: ' +
-                    response.status);
-                return;
+                alert("Sorry, can't find the meaning of that! Try another word...")
             }
 
             return response.json();
@@ -25,42 +22,34 @@ const search = () => {
             // console.log(phonetics)
             let synonymns = []
             let antonyms = []
-            let definitions = []
-            for (let meaning of meanings) {
-                // console.log(meaning)
+            let def = {}
 
-                let defs = []
-                if (meaning.synonymns != null) synonymns.push(meaning.synonymns)
-                if (meaning.antonyms != null) antonyms.push(meaning.antonyms)
+            for (let meaning of meanings) {
+
+                if (meaning.synonymns != null) synonymns.push(meaning.synonymns[0])
+                if (meaning.antonyms != null) antonyms.push(meaning.antonyms[0])
 
                 var partsOfSpeech = meaning["partOfSpeech"]
                 for (let i of meaning["definitions"]) {
-                    defs.push(i.definition)
+                    if (Object.keys(def).length == 0) Object.assign(def, { [partsOfSpeech]: i["definition"] })
                 }
-                Object.assign(definitions, { [partsOfSpeech]: defs })
+
             }
-            
-            console.log(phonetics)
+            console.log(def)
+
+
             console.log(synonymns)
-            console.log(antonyms)
-            console.log(definitions)
-            // console.log(typeof definitions)
-    
-            for (let k of definitions) {
-                    console.log("hi")
-                    console.log(k)
-                    alert("hi")
-                }
-            
-            
+            console.log(antonyms[0])
             word_box.textContent = query.value
             phonetics_box.textContent = phonetics
-            synonyms_box.textContent = synonymns
-            antonyms_box.textContent = antonyms
+            synonyms_box.textContent = `${synonymns.length != 0 && antonyms[0] != undefined ? synonymns[0] : "No synonyms found"}`
+            antonyms_box.textContent = `${antonyms.length != 0 && antonyms[0] != undefined ? antonyms[0] : "No antonyms found"}`
+            parts_of_speech_box.textContent = Object.keys(def)[0]
+            meaning_box.textContent = def[Object.keys(def)[0]]
+            result.classList.remove("blur-lg");
 
-            
 
-            return {phonetics, definitions, synonymns, antonyms }
+            // return { phonetics, definitions, synonymns, antonyms }
 
 
             // let box = document.getElementById("box")
